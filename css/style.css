@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap');
+
+/* variables */
+:root {
+    --mainBrown: #b06835;
+    --mainGreen: #06492d;
+    --mainWhite: #fff;
+    --imagesBgColor: #cfcfcf;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all 0.3s linear;
+  }
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+.wrap {
+ width: 80%;
+ margin: 40px auto 0;
+ font-family: 'Cairo', 'Poppins', sans-serif; 
+}
+
+h1 {
+ font-size: 40px;   
+ text-align: center;
+ text-transform: uppercase;
+ margin-bottom: 20px;
+ color: var(--mainBrown);
+ letter-spacing: var(--mainSpacing);
+}
+
+.game {
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.game div.player img {
+ flex-basis: 300px;
+ height: 300px;
+ margin: 10px;
+ border: 5px solid var(--mainGreen);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: var(--imagesBgColor);
+}
+
+.play {
+display: flex;
+justify-content: center;
+align-items: center;
+max-width: 600px;
+margin: 20px auto;
+gap: 20px;
+}
+
+.play input{
+ height: 70px;
+ font-size: 32px;
+ padding: 20px;
+ width: 400px;
+ border: 5px solid var(--mainBrown);
+ text-align: center;
+}
+
+.play input::placeholder{
+    color: var(--mainBrown);
+    opacity: 0.5;
+}
+
+.play input:focus, .play input#bid{
+    color: var(--mainBrown);
+    letter-spacing: var(--mainSpacing);
+}
+
+.play button#start {
+    width: 40%;
+    height: 70px;
+    text-align: center;
+    font-size: 32px;
+    text-transform: uppercase;
+    border: 5px solid var(--mainBrown);
+    color: var(--mainWhite);
+    cursor: pointer;
+    letter-spacing: 6px;
+    background-image: linear-gradient(30deg, var(--mainBrown) 50%, transparent 70%);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    transition: all 0.8s ease-in-out;
+}
+
+.play button#start:hover{
+    background-position: 100%;
+    color: var(--mainBrown);
+    background-color: var(--mainWhite);
+}
+
+.panel {
+ max-width: 600px;
+ text-align: center;
+ margin: 30px auto; 
+ padding: 5px 0;
+ background-color: var(--mainBrown);
+ color: var(--mainWhite); 
+ border: 5px solid var(--mainBrown);
+ letter-spacing: var(--mainSpacing);
+
+}
+
+.score{
+        padding: 5px;
+        max-width: 600px;
+        text-align: center;
+        margin: 30px auto;
+        background-color: var(--mainBrown);
+        color: var(--mainWhite); 
+        letter-spacing: var(--mainSpacing);    
+}
+
+.score .wallet{
+    color: var(--mainGreen);
+}
+
+.panel, .score {
+ font-size: 26px;
+}
+
+.panel span, .score span {
+ font-weight: bold;
+}
+
+span.result{
+    color: var(--mainGreen);
+}
+
+@media screen and (max-width: 1025px) {
+    .wrap {
+    width: 90%;
+    }
+    
+    .game div.player img {
+        flex-basis: 200px;
+        height: 200px;
+        margin: 10px;
+        border: 5px solid var(--mainGreen);
+       }
+}
+
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 20px;
+    }
+
+    .game {
+        justify-content: space-around;
+       }
+
+    .game div.player img {
+        flex-basis: 140px;
+        height: 140px;
+        margin: 5px;   
+        border: 3px solid var(--mainGreen);
+       }
+    .panel, .score{
+        font-size: 24px;
+    }   
+    .panel{
+
+        height: 60px;
+        border: 3px solid var(--mainBrown);
+    } 
+
+    .play input{
+        height: 60px;
+        border: 3px solid var(--mainBrown);
+    }
+    
+    .play input#bid{
+        font-size: 22px;
+        padding: 0 5px 0;
+    }
+
+    .play button#start{
+        height: 60px;
+        font-size: 24px;
+        border: 3px solid var(--mainBrown);
+    }
+}
+
+@media screen and (max-width: 480px){
+    .game div.player img {
+        flex-basis: 100px;
+        height: 100px;
+        }
+    .play input#bid{
+        width: calc(60% - 20px);
+    }    
+
+}

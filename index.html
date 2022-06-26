@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tennis Players Machine Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrap">
+
+    <h1>Tennis Players Machine Game</h1>
+
+    <section class="game">
+      <div class="player">
+        <img src="images/player-shadow.png" alt="">
+      </div>
+      <div class="player">
+        <img src="images/player-shadow.png" alt="">
+      </div>
+      <div class="player">
+        <img src="images/player-shadow.png" alt="">`
+      </div>
+    </section>
+    
+    <section class="panel">Your wallet: <span class="wallet"></span></section>
+
+    <section class="play">
+      <input type="number" placeholder="Enter amount" id="bid">
+      <button id="start">Spin!</button>
+    </section>
+
+
+    <section class="score">
+      <p><span class="result"></span></p>
+      <p>Rounds: <span class="number"></span></p> 
+      <p>Won: <span class="win"></span></p> 
+      <p>Lost: <span class="loss"></span></p> 
+    </section>
+
+  </div>
+
+  <script src="js/wallet.js"></script>
+  <script src="js/statistics.js"></script>
+  <script src="js/draw.js"></script>
+  <script src="js/result.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
