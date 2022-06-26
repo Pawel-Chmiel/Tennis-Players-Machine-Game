@@ -1,6 +1,6 @@
 # Tennis Players Machine Game
 
-### See DEMO [here](https://pawel-chmiel.github.io/weather-app/)
+### See DEMO [here](https://pawel-chmiel.github.io/Tennis-Players-Machine-Game/)
 
 ### ES6 OOP exercise - Tennis Players Machine Game.
 
