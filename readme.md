@@ -10,4 +10,5 @@
 - HTML, 
 - CSS, 
 - RWD,
-- JavaScript ES6 with OOP.
+- JavaScript ES6 with OOP,
+- npm.
