@@ -1,4 +1,4 @@
-   class Draw {
+class Draw {
     constructor() {
 
      const playersList = []        
@@ -8,6 +8,10 @@
 
      let _result = this.drawResult()
      this.getDrawResult = () => _result;
+    }
+
+    test(){
+        console.log("działa");
     }
    
     drawResult() {
