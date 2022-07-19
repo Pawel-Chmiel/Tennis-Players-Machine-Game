@@ -11,33 +11,34 @@ class Game {
      this.spanResult = document.querySelector('.score span.result');
      this.spanGames = document.querySelector('.score span.number');
      this.spanWins = document.querySelector('.score span.win');
-     this.spanLosses = document.querySelector('.score span.loss');
-   
+     this.spanLosses = document.querySelector('.score span.loss');   
      this.render()
-   
     }
    
-    render(players = [`<img src="images/player-shadow.png">`, `<img src="images/player-shadow.png">`, `<img src="images/player-shadow.png">`], money = this.wallet.getWalletValue(), result = "", stats = [0, 0, 0], bid = 0, wonMoney = 0) {
-   
-     this.boards.forEach((board, index) => {
-      board.innerHTML = players[index]
-     })
-   
-     this.spanWallet.textContent = money;
-     if (result) {
-      result = `Congrats! You WON $${wonMoney}! `;
-     } else if (!result && result !== "") {
-      result = `Sorry, You LOST $${bid}! `
-     } else{
-        result = 'Start The Game!';
-     }
-     this.spanResult.textContent = result;
-     this.spanGames.textContent = stats[0];
-     this.spanWins.textContent = stats[1];
-     this.spanLosses.textContent = stats[2];
-   
-     this.inputBid.value = "";
-    }
+    render(players = [`<img src="images/player-shadow.png">`,
+                      `<img src="images/player-shadow.png">`, 
+                      `<img src="images/player-shadow.png">`], 
+                      money = this.wallet.getWalletValue(), 
+                      result = "", 
+                      stats = [0, 0, 0], bid = 0, 
+                      wonMoney = 0) {   
+                         this.boards.forEach((board, index) => {
+                            board.innerHTML = players[index]
+                            });   
+                         this.spanWallet.textContent = money;
+                         if (result) {
+                          result = `Congrats! You WON $${wonMoney}! `;
+                         } else if (!result && result !== "") {
+                          result = `Sorry, You LOST $${bid}! `
+                         } else{
+                            result = 'Start The Game!';
+                         }
+                         this.spanResult.textContent = result;
+                         this.spanGames.textContent = stats[0];
+                         this.spanWins.textContent = stats[1];
+                         this.spanLosses.textContent = stats[2];
+                         this.inputBid.value = "";
+                        }
    
     startGame() {
      if (this.inputBid.value < 1) return alert('The amount is too low or You put incorrect value!')
@@ -57,8 +58,7 @@ class Game {
     this.stats.addGameToStatistics(win, bid);
 
     this.render(players, this.wallet.getWalletValue(), win, this.stats.showGameStatistics(), bid, wonMoney);
-
-    }
+        }
    }
    
    
